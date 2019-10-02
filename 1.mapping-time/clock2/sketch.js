@@ -31,7 +31,7 @@ function draw() {
   strokeWeight(5);
   beginShape();
   vertex(0,height-height*h);
-  vertex(m*width,height-height*h-50);
+  vertex(m*width,height-height*h-30);
   vertex(width,height-height*h);
   endShape();
   }
