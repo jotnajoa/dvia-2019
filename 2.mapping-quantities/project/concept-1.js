@@ -1,7 +1,8 @@
 var data
 
 function preload(){
-  data = loadJSON('data/totals.json')
+  // data = loadJSON('data/totals.json')
+  data = loadTable('data/totals.csv', 'csv', 'header')
 }
 
 function setup(){
