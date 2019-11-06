@@ -1,23 +1,87 @@
-var totals
-var clocks
-
 function preload(){
-  totals = loadtable('totals.csv','csv','header')
-  clocks = loadtable('ddc.csv','csv','header')
+  total= loadTable('data/totals.csv','csv','header')
+  times= loadTable('data/ddc.csv','csv','header')
 }
 
 function setup(){
-  // Add a final argument of `SVG` to your createCanvas command
-  createCanvas(3000, 500)
-  background(0)
-  
-  var ttable = totals
-  var ctable = clocks
+  createCanvas(1500,1000,SVG)
+  background(150)
+  var x
+  var y
+  var colWidth = 100
+  var rowHeight = 50
 
-  for (r=1;r<ttable.getRowCount();r++){
-    var c = 1
-    var nts = ttable.getNum(r,c)
-    c = c+1
-    print(nts)
-  }  
+  var UStestnum = []
+  var RStestnum = []
+  var UKtestnum = []
+  var FRtestnum = []
+  var CHtestnum = []
+  var IDtestnum = []
+  var PKtestnum = []
+  var NKtestnum = []
+x=1;
+y=1;
+var r=15;
+var a=0;
+
+for(k=1;k<total.getColumnCount();k++){
+  text(total.columns[k],30+k*colWidth,500)
 }
+
+while(times.getString(r,1)==times.getString(r+1,1)){
+  // for (var r=0; r<times.getRowCount();r++) {
+            
+      stroke(100,0,0)
+      strokeWeight(5)
+      UStestnum.push(total.getString(r,1))
+
+      line(30+1*colWidth,400-a*100,30+1*colWidth,400-a*100-UStestnum[a])
+
+      RStestnum.push(total.getString(r,2))
+      stroke(100,100,0)
+      strokeWeight(5)
+      line(30+2*colWidth,400-a*100,30+2*colWidth,400-a*100-RStestnum[a])
+      
+
+      UKtestnum.push(total.getString(r,3))
+      stroke(100,100,100)
+      strokeWeight(5)
+      line(30+3*colWidth,400-a*100,30+3*colWidth,400-a*100-UKtestnum[a])
+
+      FRtestnum.push(total.getString(r,4))
+      stroke(150,10,100)
+      strokeWeight(5)
+      line(30+4*colWidth,400-a*100,30+4*colWidth,400-a*100-FRtestnum[a])
+
+
+      CHtestnum.push(total.getString(r,5))
+      stroke(150,10,100)
+      strokeWeight(5)
+      line(30+5*colWidth,400-a*100,30+5*colWidth,400-a*100-CHtestnum[a])
+
+      IDtestnum.push(total.getString(r,6))
+      stroke(150,10,100)
+      strokeWeight(5)
+      line(30+6*colWidth,400-a*100,30+6*colWidth,400-a*100-IDtestnum[a])
+
+      PKtestnum.push(total.getString(r,7))
+      stroke(150,10,100)
+      strokeWeight(5)
+      line(30+7*colWidth,400-a*100,30+7*colWidth,400-a*100-IDtestnum[a])
+
+
+      NKtestnum.push(total.getString(r,8))
+      stroke(150,10,100)
+      strokeWeight(5)
+      line(30+8*colWidth,400-a*100,30+8*colWidth,400-a*100-NKtestnum[a])
+
+      text(total.getString(r,0),30,400-a*100)
+      r= r+1;
+      a=a+1;
+      
+
+    }
+// print(UStestnum)
+ save(`1.svg`)
+}
+

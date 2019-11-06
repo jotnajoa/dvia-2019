@@ -1,5 +1,6 @@
 ## Process
 
-Description of the contents of this folder, a prose description of your ideas for how to represent
-the nuclear testing time series, and links to external data sources you'll be incorporating into
-the project.
+MAPPING THE TOTAL NUMBER OF NUCLEAR TEST.
+FIND corresponding time for the dooms day clock.
+shows the process of time with the bar graph indicating number of test in each country 
+and illustrate how much each country contributed for the dooms day clock time change
