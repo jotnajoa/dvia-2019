@@ -15,9 +15,10 @@ function setup() {
   var quakes = unpackJSON(jsonData)
   
   /* try uncommenting the next line and sorting by different attribute */
-  // quakes = sortQuakes(quakes, '-depth') // '-depth' means sort from deepest to shallowest
+  quakes = sortQuakes(quakes, '-depth') // '-depth' means sort from deepest to shallowest
   // quakes = sortQuakes(quakes, 'mag') // 'mag' means sort from smallest to largest
 
+  print(quakes)
   print(`${quakes.length} seismic events found`)
   print(`largest magnitude: ${maxValue(quakes, 'mag')}`)
   print(`intensity range: ${minValue(quakes, 'mmi')}–${maxValue(quakes, 'mmi')}`)
