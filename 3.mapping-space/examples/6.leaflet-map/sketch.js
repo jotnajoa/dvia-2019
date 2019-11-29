@@ -41,6 +41,8 @@ function setup() {
 
         // place the new dot on the map
         circle.addTo(mymap);
+        circle.bindPopup(
+    "i am a circle")
     }
 
 }
