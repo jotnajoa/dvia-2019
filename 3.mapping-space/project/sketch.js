@@ -64,11 +64,9 @@ function setup() {
 
     // load a set of map tiles – choose from the different providers demoed here:
     // https://leaflet-extras.github.io/leaflet-providers/preview/
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoiZHZpYTIwMTciLCJhIjoiY2o5NmsxNXIxMDU3eTMxbnN4bW03M3RsZyJ9.VN5cq0zpf-oep1n1OjRSEA'
+        maxZoom: 20,
     }).addTo(mymap);
 
     // step through the rows of the table and add a dot for each event
@@ -105,7 +103,7 @@ function setup() {
         if (newMarker) {
         mymap.removeLayer(newMarker);
         }
-        background(150)
+        background(255)
 
         var coord = e.latlng;
         var lat = coord.lat;
