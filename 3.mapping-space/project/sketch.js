@@ -86,6 +86,9 @@ function setup() {
             radius: row.getNum('mag') * 10000
         })
         circle.addTo(mymap);
+        circle.on('click',function(e){
+            print(e.latlng.lat)
+        })
 
         // circle.bindPopup("i am a circle")
         // circle.on('click', function(e){
