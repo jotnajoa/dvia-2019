@@ -14,6 +14,7 @@ function setup() {
   // convert the raw geoJSON feed we loaded from the USGS into a plain array of objects
   var quakes = unpackJSON(jsonData)
   
+<<<<<<< HEAD
   /* try uncommenting the next line and sorting by different attribute */
 <<<<<<< HEAD
   quakes = sortQuakes(quakes, '-depth') // '-depth' means sort from deepest to shallowest
@@ -22,6 +23,11 @@ function setup() {
   // quakes = sortQuakes(quakes, 'depth') // '-depth' means sort from deepest to shallowest
   quakes = sortQuakes(quakes, '-mag') // 'mag' means sort from smallest to largest
 >>>>>>> 5d745d3e2e469722fe7b334f4b72d74eaea4cf48
+=======
+  /* try uncommenting one of the next lines and sorting by different attribute */
+  // quakes = sortQuakes(quakes, 'depth') // '-depth' means sort from deepest to shallowest
+  // quakes = sortQuakes(quakes, '-mag') // 'mag' means sort from smallest to largest
+>>>>>>> 566876902397f93638491507be0a6d070f0895f2
 
   print(quakes)
   print(`${quakes.length} seismic events found`)
