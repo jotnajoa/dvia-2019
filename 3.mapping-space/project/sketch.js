@@ -11,7 +11,7 @@ var row;
 var latlngs=[]
 var lat;
 var lng;
-var deno = 20000
+var deno
 var lc1;
 var lc2;
 var lc3;
@@ -28,7 +28,10 @@ var circle
 var clickmag
 var f
 
-
+var bignumber = 4792457240
+var millions = bignumber/1000000
+var sizename = millions.toFixed(1)
+console.log(`${sizename} Million`)
 // var lat;
 // var lng;
 
@@ -50,19 +53,23 @@ function setup() {
     myslider= createSlider(1,1000000,500000)
     myslider.position(920,25)
     myslider2=createSlider(1,100,5)
-    myslider2.position(1550,25)
+    myslider2.position(1520,25)
+    myslider3=createSlider(10000,100000,20000)
+    myslider3.position(1200,25)
     mytext1 = createP('SIZE OF CITY')
     mytext1.position(800,10)
     mytext5 = createP('PIXEL SCALE')
     mytext5.position(1400,10)
     mytext2 = createP('PROXIMITY')
     mytext2.position(800,60)
+    mytext3 = createP('UNITSIZE')
+    mytext3.position(1100,10)
     // mytext3 = createP('Proximity')
     // mytext3.position(800,200)
     lc1=400
     mytext4 = createP('POPULATION AFFECTED')
     mytext4.position(800,lc1)
-    mytext5 = createP('MAGNITUDE')
+    mytext5 = createP('MAGNITUDE (RICHTER)')
     mytext5.position(1400,60)
 
     
@@ -108,6 +115,7 @@ function setup() {
 
             line(600,400-l,1000,400-l)
             stroke(l,0,50,[100])
+            text(clickmag,570,410-f)
             
         }
             pop()
@@ -145,6 +153,7 @@ function setup() {
         fill(150,30,0,100)
         lc3=500
         noStroke()
+        deno=myslider3.value()
         popmap(100,lc3,closestBigCities[0].population/deno,closestBigCities[0].population/deno,100,0,0)
         popmap(300,lc3,closestBigCities[1].population/deno,closestBigCities[1].population/deno,0,100,0)
         popmap(500,lc3,closestBigCities[2].population/deno,closestBigCities[2].population/deno,0,0,100)
@@ -213,19 +222,23 @@ function setup() {
         // text(closestBigCities[3].name,350,lc2)
         // text(closestBigCities[4].name,450,lc2)
 function draw() {
-    
+            fill(15)
+            textSize(15)
+            text('0',570,400)
+            text('6.5',570,130)
+
     for(var z = 0; z<40; z++){
         for(var q =0; q<10; q++){
             push()
             strokeWeight(0.1)
-            stroke(180,[20])
+            stroke(180,[30])
             line(600+z*10,400-q*30,600+z*10+5,400-q*30)
             pop()
+
               }
         
         
     }
-    
 
 }
         

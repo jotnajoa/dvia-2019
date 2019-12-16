@@ -1,3 +1,2 @@
-Each Square is one hour.
-This clock is using 24 hour base, rather than 12 hours for Am and Pm respectively.
-Time progress is represented by the guage growing from left to right.
+Grid pattern has 24 sub-category.
+Each square represents an hour. within one hour the filling pattern represents passage of minutes.

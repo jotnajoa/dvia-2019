@@ -1,3 +1,2 @@
-This sketch is inspired by a primitive form of clock
-The progress of time is represented by the shadow made by the pole at the
-center.
+CLOCK 1 is inspired by sun clock in ancient time.
+As time goes, the shadow casting on the background represents the shadow made by the stick at the center.

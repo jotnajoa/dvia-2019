@@ -1,2 +1,2 @@
-Circle Growing from the center indicates each month
-The ellipse takes up the width of the canvas means each day.
+Circle size grows from January to December
+Each day is represented by horizontal ellipse.

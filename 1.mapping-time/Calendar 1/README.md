@@ -1,2 +1,3 @@
-Each Day is single rectangle which keep stacking.
-As Year progresses, the color of square grows more redish.
+Each square represents one day.
+As day goes, the number of square increases.
+Since each month has different number of days, the stacking pattern of each month will have different total height.
