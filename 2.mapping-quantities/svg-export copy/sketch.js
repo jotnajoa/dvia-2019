@@ -21,7 +21,7 @@ function setup(){
   var NKtestnum = []
 x=1;
 y=1;
-var r=15;
+var r=1;
 var a=0;
 
 for(k=1;k<total.getColumnCount();k++){
@@ -82,6 +82,6 @@ while(times.getString(r,1)==times.getString(r+1,1)){
 
     }
 // print(UStestnum)
- save(`1.svg`)
+ save(''${str(r)}'.svg')
 }
 

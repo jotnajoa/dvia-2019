@@ -4,8 +4,8 @@ function preload(){
 }
 
 function setup(){
-  createCanvas(1500,4000,SVG)
-  background(50)
+  createCanvas(1500,4000)
+  background(150)
   var x
   var y
   var colWidth = 100
@@ -23,11 +23,11 @@ function setup(){
   textAlign(CENTER)
 x=1;
 y=3; // multiplier for the spacing between years
-var r=2;
+var r=29;
 var a=0;
 
 for(k=1;k<total.getColumnCount();k++){
-  // text(total.columns[k],30+k*colWidth,baseline+100)
+  text(total.columns[k],30+k*colWidth,baseline+100)
 }
 
 while(times.getString(r,1)==times.getString(r+1,1)){
@@ -78,7 +78,7 @@ while(times.getString(r,1)==times.getString(r+1,1)){
       line(30+8*colWidth,baseline-a*rowHeight,30+8*colWidth,baseline-a*rowHeight-y*NKtestnum[a])
 
 
-      // text(total.getString(r,0),30,baseline-a*rowHeight)
+      text(total.getString(r,0),30,baseline-a*rowHeight)
       r= r+1;
       a= a+1;
       }
@@ -129,8 +129,7 @@ while(times.getString(r,1)==times.getString(r+1,1)){
       strokeWeight(5)
       line(30+8*colWidth,baseline-a*rowHeight,30+8*colWidth,baseline-a*rowHeight-y*NKtestnum[a])
 
-      // text(total.getString(r,0),30,baseline-a*rowHeight)
-      var xx = total.getString(r,0)
+      text(total.getString(r,0),30,baseline-a*rowHeight)
     }
     noFill()
     ellipse(750,3200,500,500)
@@ -141,9 +140,6 @@ while(times.getString(r,1)==times.getString(r+1,1)){
     arc(750,3200,500,500,-1/2*PI,-1/2*PI-s)
     print(s)
     print(kvalue)
-    var fileName = 'myFile_'+ xx +'.svg';
-    fileName= fileName.replace(/^\s+|\s+$/g,""); 
-    save(fileName);
 }
 
 
