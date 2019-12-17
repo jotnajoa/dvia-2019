@@ -1,4 +1,2 @@
-## Process
-
-Listing of the contents of this folder and a prose description of your ideas for how to represent
-the earthquake data geospatially and diagrammatically.
+First sketch shows individual entries that would go on the page.
+the new layout sketch shows the revision made on the first draft.
